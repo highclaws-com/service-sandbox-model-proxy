@@ -7,11 +7,9 @@ port = 18790
 
 [upstream]
 openai_base_url = "https://api.openai.com"
-#openai_base_url = "https://generativelanguage.googleapis.com/v1beta/openai"
-#openai_base_url = "https://api.opencode.ai"
 openrouter_base_url = "https://openrouter.ai/api"
-anthropic_base_url = "https://api.anthropic.com"
-minimax_base_url = "https://api.minimax.io"
+opencode_zen_base_url = "https://opencode.ai/zen"
+opencode_go_base_url = "https://opencode.ai/zen/go"
 
 [[keys]]
 virtual_key = "vk-openrouter"
@@ -28,14 +26,9 @@ provider = "openai"
 provider = "codex"
 
 [[keys]]
-virtual_key = "vk-gemini-vertex"
-real_key = "changeme!"
-provider = "openai"
-
-[[keys]]
 virtual_key = "vk-opencode-zen"
 real_key = "changeme!"
-provider = "openai"
+provider = "opencode"
 
 [dlp]
 scan_responses = false
