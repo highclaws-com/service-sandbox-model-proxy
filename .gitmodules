@@ -1,0 +1,3 @@
+[submodule "clawshell"]
+	path = clawshell
+	url = git@github.com:highclaws-com/clawshell.git

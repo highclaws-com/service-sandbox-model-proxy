@@ -8,11 +8,10 @@ RUN apt-get update \
 RUN npm install -g @clawshell/clawshell
 
 RUN groupadd --system clawshell \
-    && useradd --system --no-create-home --gid clawshell --shell /usr/sbin/nologin clawshell \
-    && mkdir -p /etc/clawshell /var/log/clawshell \
+    && useradd --system --no-create-home --gid clawshell --shell /bin/sh clawshell \
+    && mkdir -p /etc/clawshell/oauth /var/log/clawshell \
     && chown -R clawshell:clawshell /etc/clawshell /var/log/clawshell \
     && chmod 700 /etc/clawshell /var/log/clawshell
 
 WORKDIR /app
-USER clawshell
 CMD ["clawshell", "start", "--foreground", "-c", "/etc/clawshell/clawshell.toml"]
