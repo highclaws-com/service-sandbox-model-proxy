@@ -1,7 +1,7 @@
 FROM node:20-slim
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends ca-certificates \
+    && apt-get install -y --no-install-recommends ca-certificates curl \
     && update-ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
