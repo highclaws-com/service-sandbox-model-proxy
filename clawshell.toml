@@ -1,0 +1,23 @@
+version = "0.2.1"
+log_level = "info"
+
+[server]
+host = "0.0.0.0"
+port = 18790
+
+[upstream]
+openai_base_url = "https://api.openai.com"
+openrouter_base_url = "https://openrouter.ai/api"
+anthropic_base_url = "https://api.anthropic.com"
+minimax_base_url = "https://api.minimax.io"
+
+[[keys]]
+virtual_key = "vk-openrouter"
+real_key = "changeme!"
+provider = "openrouter"
+
+[dlp]
+scan_responses = false
+
+[stats]
+persist_path = "/etc/clawshell/stats.json"
