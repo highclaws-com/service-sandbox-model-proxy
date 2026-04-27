@@ -1,0 +1,12 @@
+.git
+.github
+
+clawshell/.git
+clawshell/.github
+clawshell/target
+clawshell/docs
+clawshell/npm
+
+**/.DS_Store
+**/__pycache__
+**/*.pyc
