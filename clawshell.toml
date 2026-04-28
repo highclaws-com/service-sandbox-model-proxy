@@ -13,11 +13,11 @@ opencode_go_base_url = "https://opencode.ai/zen/go"
 
 [[keys]]
 virtual_key = "vk-openrouter"
-real_key = "changeme!"
+real_key = unset
 provider = "openrouter"
 
 [[keys]]
-virtual_key = "vk-codex"
+virtual_key = "vk-openai-codex"
 auth = "oauth"
 oauth_provider = "codex"
 provider = "openai"
@@ -27,7 +27,7 @@ provider = "codex"
 
 [[keys]]
 virtual_key = "vk-opencode-zen"
-real_key = "changeme!"
+real_key = unset
 provider = "opencode"
 
 [dlp]
