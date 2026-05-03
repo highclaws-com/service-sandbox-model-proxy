@@ -7,14 +7,11 @@ port = 18790
 
 [upstream]
 openai_base_url = "https://api.openai.com"
+anthropic_base_url = "https://api.anthropic.com"
 openrouter_base_url = "https://openrouter.ai/api"
 opencode_zen_base_url = "https://opencode.ai/zen"
-opencode_go_base_url = "https://opencode.ai/zen/go"
-
-[[keys]]
-virtual_key = "vk-openrouter"
-real_key = "unset"
-provider = "openrouter"
+minimax_base_url = "https://api.minimax.io"
+mimo_tokenplan_base_url = "https://token-plan-sgp.xiaomimimo.com"
 
 [[keys]]
 virtual_key = "vk-openai-codex"
@@ -26,9 +23,19 @@ provider = "openai"
 provider = "codex"
 
 [[keys]]
+virtual_key = "vk-openrouter"
+real_key = "unset"
+provider = "openrouter:openrouter_base_url"
+
+[[keys]]
 virtual_key = "vk-opencode-zen"
 real_key = "unset"
-provider = "opencode"
+provider = "opencode:opencode_zen_base_url"
+
+[[keys]]
+virtual_key = "vk-mimo-tokenplan"
+real_key = "unset"
+provider = "openai:mimo_tokenplan_base_url"
 
 [dlp]
 scan_responses = false
