@@ -1,0 +1,38 @@
+services:
+  clawshell:
+    build: .
+    ports:
+      - "18790:18790"
+    volumes:
+      - ./clawshell.toml:/etc/clawshell/clawshell.toml:ro
+      - ./codex.json:/etc/clawshell/oauth/codex.json:ro
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "http://127.0.0.1:18790/admin/stats"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+
+  codex-request:
+    image: curlimages/curl:8.11.1
+    depends_on:
+      clawshell:
+        condition: service_healthy
+    command:
+      - sh
+      - -c
+      - |
+        curl --fail-with-body --show-error --silent \
+          http://clawshell:18790/v1/chat/completions \
+          -H 'Authorization: Bearer vk-openai-codex' \
+          -H 'Content-Type: application/json' \
+          --data @- <<'JSON'
+        {
+          "model": "gpt-5.5",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Say hello!"
+            }
+          ]
+        }
+        JSON
