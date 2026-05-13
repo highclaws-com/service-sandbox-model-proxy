@@ -9,9 +9,10 @@ port = 18790
 openai_base_url = "https://api.openai.com"
 anthropic_base_url = "https://api.anthropic.com"
 openrouter_base_url = "https://openrouter.ai/api"
+nous_base_url = "https://inference-api.nousresearch.com"
 opencode_zen_base_url = "https://opencode.ai/zen"
-minimax_base_url = "https://api.minimax.io"
 mimo_tokenplan_base_url = "https://token-plan-sgp.xiaomimimo.com"
+minimax_base_url = "https://api.minimax.io"
 
 [[keys]]
 virtual_key = "vk-openai-codex"
@@ -19,13 +20,15 @@ auth = "oauth"
 oauth_provider = "codex"
 provider = "openai"
 
-[[oauth_providers]]
-provider = "codex"
-
 [[keys]]
 virtual_key = "vk-openrouter"
 real_key = "unset"
 provider = "openrouter:openrouter_base_url"
+
+[[keys]]
+virtual_key = "vk-nous"
+real_key = "unset"
+provider = "openai:nous_base_url"
 
 [[keys]]
 virtual_key = "vk-opencode-zen"
@@ -36,6 +39,9 @@ provider = "opencode:opencode_zen_base_url"
 virtual_key = "vk-mimo-tokenplan"
 real_key = "unset"
 provider = "openai:mimo_tokenplan_base_url"
+
+[[oauth_providers]]
+provider = "codex"
 
 [dlp]
 scan_responses = false
