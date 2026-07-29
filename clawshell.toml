@@ -11,6 +11,7 @@ anthropic_base_url = "https://api.anthropic.com"
 openrouter_base_url = "https://openrouter.ai/api"
 nous_base_url = "https://inference-api.nousresearch.com"
 opencode_zen_base_url = "https://opencode.ai/zen"
+opencode_go_url = "https://opencode.ai/zen/go"
 mimo_tokenplan_base_url = "https://token-plan-sgp.xiaomimimo.com"
 minimax_base_url = "https://api.minimax.io"
 
@@ -34,6 +35,11 @@ provider = "openai:nous_base_url"
 virtual_key = "vk-opencode-zen"
 real_key = "unset"
 provider = "opencode:opencode_zen_base_url"
+
+[[keys]]
+virtual_key = "vk-opencode-go"
+real_key = "unset"
+provider = "opencode:opencode_go_url"
 
 [[keys]]
 virtual_key = "vk-mimo-tokenplan"
