@@ -14,7 +14,7 @@ opencode_zen_base_url = "https://opencode.ai/zen"
 opencode_go_url = "https://opencode.ai/zen/go"
 mimo_tokenplan_base_url = "https://token-plan-sgp.xiaomimimo.com"
 minimax_base_url = "https://api.minimax.io"
-selfhost_base_url = "https://model-pool.highclaws.com"
+highclaws_base_url = "https://model-pool.highclaws.com"
 
 [[keys]]
 virtual_key = "vk-openai-codex"
@@ -48,9 +48,9 @@ real_key = "unset"
 provider = "openai:mimo_tokenplan_base_url"
 
 [[keys]]
-virtual_key = "vk-selfhost"
+virtual_key = "vk-highclaws"
 real_key = "unset"
-provider = "openai:selfhost_base_url"
+provider = "openai:highclaws_base_url"
 
 [[oauth_providers]]
 provider = "codex"
