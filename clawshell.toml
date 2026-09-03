@@ -52,6 +52,9 @@ virtual_key = "vk-highclaws"
 real_key = "unset"
 provider = "openai:highclaws_base_url"
 
+# BEGIN PROFILE KEYS
+# END PROFILE KEYS
+
 [[oauth_providers]]
 provider = "codex"
 
