@@ -15,6 +15,7 @@ opencode_go_url = "https://opencode.ai/zen/go"
 mimo_tokenplan_base_url = "https://token-plan-sgp.xiaomimimo.com"
 minimax_base_url = "https://api.minimax.io"
 highclaws_base_url = "https://model-pool.highclaws.com"
+custom_base_url = "unset"
 
 [[keys]]
 virtual_key = "vk-openai-codex"
@@ -51,6 +52,11 @@ provider = "openai:mimo_tokenplan_base_url"
 virtual_key = "vk-highclaws"
 real_key = "unset"
 provider = "openai:highclaws_base_url"
+
+[[keys]]
+virtual_key = "vk-custom"
+real_key = "unset"
+provider = "openai:custom_base_url"
 
 # BEGIN PROFILE KEYS
 # END PROFILE KEYS
