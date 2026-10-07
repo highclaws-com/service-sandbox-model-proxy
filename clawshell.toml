@@ -12,6 +12,7 @@ openrouter_base_url = "https://openrouter.ai/api"
 nous_base_url = "https://inference-api.nousresearch.com"
 opencode_zen_base_url = "https://opencode.ai/zen"
 opencode_go_url = "https://opencode.ai/zen/go"
+commandcode_base_url = "https://api.commandcode.ai/provider"
 mimo_tokenplan_base_url = "https://token-plan-sgp.xiaomimimo.com"
 minimax_base_url = "https://api.minimax.io"
 highclaws_base_url = "https://model-pool.highclaws.com"
@@ -47,6 +48,11 @@ provider = "opencode:opencode_go_url"
 virtual_key = "vk-mimo-tokenplan"
 real_key = "unset"
 provider = "openai:mimo_tokenplan_base_url"
+
+[[keys]]
+virtual_key = "vk-commandcode"
+real_key = "unset"
+provider = "openai:commandcode_base_url"
 
 [[keys]]
 virtual_key = "vk-highclaws"
