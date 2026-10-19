@@ -15,7 +15,7 @@ opencode_go_url = "https://opencode.ai/zen/go"
 commandcode_base_url = "https://api.commandcode.ai/provider"
 mimo_tokenplan_base_url = "https://token-plan-sgp.xiaomimimo.com"
 minimax_base_url = "https://api.minimax.io"
-highclaws_base_url = "https://model-pool.highclaws.com"
+highclaws_base_url = "https://model-pool.__model_pool_domain__"
 custom_base_url = "unset"
 
 [[keys]]
