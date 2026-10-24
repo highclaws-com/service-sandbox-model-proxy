@@ -1,10 +1,10 @@
-FROM rust:1-slim-bookworm AS builder
+FROM rust:1.99.1-slim-trixie AS builder
 
 WORKDIR /src/clawshell
 COPY clawshell ./
 RUN cargo build --release --locked
 
-FROM debian:bookworm-slim
+FROM debian:trixie-20261020-slim
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends ca-certificates curl \
