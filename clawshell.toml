@@ -25,6 +25,12 @@ oauth_provider = "codex"
 provider = "openai"
 
 [[keys]]
+virtual_key = "vk-xai-oauth"
+auth = "oauth"
+oauth_provider = "xai"
+provider = "openai"
+
+[[keys]]
 virtual_key = "vk-openrouter"
 real_key = "unset"
 provider = "openrouter:openrouter_base_url"
@@ -69,6 +75,9 @@ provider = "openai:custom_base_url"
 
 [[oauth_providers]]
 provider = "codex"
+
+[[oauth_providers]]
+provider = "xai"
 
 [dlp]
 scan_responses = false
